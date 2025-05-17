@@ -1,0 +1,27 @@
+# permissions for end users to edit openfgas.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: openfga-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: openfga-editor-role
+rules:
+- apiGroups:
+  - authz.aspectinfotech.com
+  resources:
+  - openfgas
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - authz.aspectinfotech.com
+  resources:
+  - openfgas/status
+  verbs:
+  - get

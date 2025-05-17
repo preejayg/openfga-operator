@@ -1,0 +1,6 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: authz.aspectinfotech.com
+  version: v1alpha1
+  kind: OpenFGA
+  chart: helm-charts/openfga
+# +kubebuilder:scaffold:watch

@@ -1,0 +1,23 @@
+# permissions for end users to view openfgas.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: openfga-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: openfga-viewer-role
+rules:
+- apiGroups:
+  - authz.aspectinfotech.com
+  resources:
+  - openfgas
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - authz.aspectinfotech.com
+  resources:
+  - openfgas/status
+  verbs:
+  - get
