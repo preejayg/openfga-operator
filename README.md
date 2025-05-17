@@ -1,6 +1,6 @@
 # OpenFGA Operator
 
-[![Release](https://img.shields.io/badge/version-v1alpha1-blue)]
+![Release](https://img.shields.io/badge/version-v1alpha1-greem)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 OpenFGA Operator automates the management of [OpenFGA](https://openfga.dev/) instances in Kubernetes.
