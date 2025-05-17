@@ -1,0 +1,25 @@
+version: 2
+updates:
+  # GitHub Actions updates (e.g. setup-go, checkout, etc.)
+  - package-ecosystem: "github-actions"
+    directory: "/" # Root of the repo
+    schedule:
+      interval: "weekly"
+
+  # Dockerfile updates (base images, etc.)
+  - package-ecosystem: "docker"
+    directory: "/" # Adjust if Dockerfile is in another folder
+    schedule:
+      interval: "weekly"
+
+  # Go module dependencies (e.g. controller-runtime, client-go)
+  - package-ecosystem: "gomod"
+    directory: "/" # where go.mod lives
+    schedule:
+      interval: "weekly"
+
+  # Helm chart dependencies (e.g. Bitnami Postgres/MySQL charts)
+  - package-ecosystem: "helm"
+    directory: "charts/openfga" # Change this to where your Chart.yaml lives
+    schedule:
+      interval: "weekly"
