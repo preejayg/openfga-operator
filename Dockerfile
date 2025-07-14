@@ -1,5 +1,5 @@
 # Build the manager binary
-FROM quay.io/operator-framework/helm-operator:v1.39.2
+FROM quay.io/operator-framework/helm-operator:v1.41.1
 
 ENV HOME=/opt/helm
 COPY watches.yaml ${HOME}/watches.yaml
